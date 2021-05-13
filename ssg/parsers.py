@@ -10,14 +10,13 @@ class Parser:
     def valid_extension(self, extension):
         if extension in self.extensions:
             return True
-        return False
     
     def parse(self, path, source, dest):
         raise NotImplementedError
 
     def read(self, path):
-        with open(path, mode='rt') as f:
-            return f
+        with open(path, mode='rt') as file:
+            return file
 
     def write(self, path, dest, content, ext=".html"):
         full_path = self.dest / path.with_suffix(ext).name
