@@ -18,11 +18,11 @@ class Content(Mapping):
 
     @property
     def body(self):
-        self.data["content"]
+        return self.data["content"]
     
     @property
     def type(self):
-        self.data["tyep"] if type in self.data else None
+        return self.data["tyep"] if type in self.data else None
 
     @type.setter
     def type(self, type):
